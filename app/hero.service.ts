@@ -14,4 +14,9 @@ export class HeroService {
     );
   }
 
+  getHero(id: number) {
+    return Promise.resolve(HEROES).then(
+      heroes => heroes.filter(hero => hero.id === id)[0]
+    );
+  }
 }
